@@ -1,0 +1,288 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.header {
+  height: 38px;
+  background-color: #0a0a23;
+  display: flex;
+  flex: 1;
+  position: sticky;
+  top: 0;
+  flex-direction: column;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.header-increase {
+  height: 76px;
+}
+
+.header-top {
+  height: 36px;
+  background-color: #0a0a23;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.header-bottom {
+  display: none;
+  height: 36px;
+  background-color: #0a0a23;
+  align-items: center;
+  flex: 1;
+  width: calc(100vw - 260px);
+}
+
+.header-bottom-show {
+  display: flex;
+}
+
+.header-left {
+  display: flex;
+  height: 100%;
+  align-items: center;
+  flex: 1;
+}
+
+.search-bar {
+  display: flex;
+  background-color: #3b3b4f;
+  height: 70%;
+  flex: 0.75;
+  min-width: none;
+}
+
+.search-bar > button {
+  border: none;
+  color: #d0d0d5;
+  background-color: transparent;
+  margin-left: 5px;
+  margin-right: 10px;
+}
+
+.search-bar input {
+  background-color: #3b3b4f;
+  border: none;
+  color: #d0d0d5;
+  font-size: large;
+  flex: 1;
+  width: 100%;
+}
+
+.search-bar input:focus {
+  outline: none;
+}
+
+.header-middle {
+  display: flex;
+  align-items: center;
+  letter-spacing: 0.4px;
+  overflow: hidden;
+  position: relative;
+  flex: 1;
+}
+
+.logo-container {
+  display: block;
+  flex-shrink: 0;
+  font-size: 1.7rem;
+  letter-spacing: -0.5px;
+  line-height: 1em;
+}
+
+.logo-container svg {
+  display: block;
+  height: 24px;
+  margin: 7px 0;
+  width: auto;
+}
+
+.menu-list {
+  display: none;
+  height: fit-content;
+  width: 260px;
+  position: fixed;
+  top: 38px;
+  right: 0;
+  flex-direction: column;
+  background-color: #0a0a23;
+  font-size: large;
+  font-family: sans-serif;
+}
+
+.menu-list .search-bar {
+  display: none;
+}
+
+.menu-list > * {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid #aaa;
+  width: 100%;
+  color: white;
+}
+
+.menu-list a,
+.language-text {
+  text-decoration: none;
+  color: white;
+  padding: 10px 0;
+  padding-left: 20px;
+}
+
+.external-option {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.external-option i {
+  padding-right: 20px;
+  color: gray;
+}
+
+.external-option:hover,
+.external-option:hover a {
+  background-color: white;
+  color: #0a0a23;
+}
+
+.select-language {
+  background-color: transparent;
+  color: white;
+  font-size: large;
+  border: none;
+  padding: 10px 0;
+  padding-left: 20px;
+}
+
+.not-signed-text {
+  text-align: center;
+  color: gray;
+  padding: 2px 15px 0;
+}
+
+.right-buttons {
+  display: flex;
+  align-items: center;
+}
+
+.menu {
+  height: 90%;
+  font-size: 18px;
+  padding: 5px 15px;
+  background-color: transparent;
+  color: white;
+  border: 1px solid white;
+  font-weight: normal;
+  margin: 0 4px;
+  cursor: pointer;
+}
+
+.menu:focus {
+  background-color: white;
+  color: #0a0a23;
+}
+
+.menu-list a:hover,
+.select-language:hover {
+  background-color: white;
+  color: #0a0a23;
+}
+
+.menu-sign-in {
+  display: none;
+}
+
+.sign-in-button {
+  background-color: #feac32;
+  background-image: linear-gradient(#fecc4c, #ffac33);
+  font-weight: normal;
+  border: 3px solid #feac32;
+  height: 90%;
+  font-size: 18px;
+  padding: 2px 8px;
+  margin: 0 4px;
+  font-family: monospace;
+}
+
+.sign-in-button:focus,
+.sign-in-button:hover {
+  background-color: #fecc4c;
+  background-image: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 980px) {
+  .header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header-left {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .header {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  .header-left {
+    display: none;
+  }
+
+  .header-bottom-show {
+    width: 100%;
+  }
+
+  .menu-list {
+    width: 100vw;
+    top: 76px;
+  }
+
+  .search-bar {
+    flex: 1;
+  }
+}
+
+@media screen and (max-width: 455px) {
+  .menu-sign-in {
+    display: flex;
+  }
+
+  .sign-in-button {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 350px) {
+  .menu-sign-in {
+    display: flex;
+  }
+
+  .sign-in-button {
+    display: none;
+  }
+
+  .logo-container {
+    position: relative;
+    left: -175px;
+  }
+}
+
+@media screen and (min-width: 981px) {
+  .header {
+    height: 38px;
+  }
+
+  .header-bottom {
+    display: none;
+  }
+}
